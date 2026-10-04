@@ -83,3 +83,26 @@ h1, h2, h3, h4, p {
 #gift-img-cheers:hover {
     background-image: url("images/cheers.gif");
 }
+#audio-control-btn {
+  background-color: #ff6b6b; /* Vibrant pink/red */
+  color: white;
+  font-style: italic;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px; /* Rounded pill shape */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+#audio-control-btn:hover {
+  background-color: #ff5252;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+#audio-control-btn.playing {
+  background-color: #4caf50; /* Changes green to indicate 'active' */
+}

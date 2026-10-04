@@ -7,7 +7,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
-        <audio id="birthday-audio" src="happy birthday.mp3" autoplay loop></audio>
+        <audio id="birthday-music" loop>
+            <source src="happy birthday.mp3" type="audio/mpeg">
+        </audio>
         <title>Birthday Card</title>
     </head>
     <body>
@@ -17,7 +19,7 @@
             <!-- <h2 id="bday-age">24 years old</h2>
             <h4 id="bday-date">01.11.2022</h4> -->
         </div>
-        
+        <button id="audio-control-btn" onclick="togglePlay()">🎵 Play Background Music</button>
         <div class="gift-section">
             <h2 class="gift-title">Here's how happy we are for you today 🥳</h2>
             <h3 class="gift-hint">(Hover over the gift)</h3>
@@ -43,6 +45,21 @@
             <h2 class="gift-title">This one's for you, my friend 🥂</h2>
             <div class="gift-img" id="gift-img-cheers"></div>
         </div>
-        
+        <script>
+function togglePlay() {
+  const audio = document.getElementById("birthday-music");
+  const btn = document.getElementById("audio-control-btn");
+
+  if (audio.paused) {
+    audio.play();
+    btn.innerHTML = "⏸️ Pause Music";
+    btn.classList.add("playing"); // Applies the green background style
+  } else {
+    audio.pause();
+    btn.innerHTML = "🎵 Play Background Music";
+    btn.classList.remove("playing");
+  }
+}
+</script>
     </body>
 </html>
